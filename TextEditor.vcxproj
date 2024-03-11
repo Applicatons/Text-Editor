@@ -75,11 +75,11 @@
     <LibraryPath>C:\CS\Application\TextEditor\Libraries\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(SolutionDir)Libraries\lib\;$(SolutionDir)Libraries\include</IncludePath>
+    <IncludePath>$(SolutionDir)Engine;$(SolutionDir)Libraries\lib\;$(SolutionDir)Libraries\include</IncludePath>
     <LibraryPath>C:\CS\Application\TextEditor\Libraries\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(SolutionDir)Libraries\lib\;$(SolutionDir)Libraries\include</IncludePath>
+    <IncludePath>$(SolutionDir)Engine;$(SolutionDir)Libraries\lib\;$(SolutionDir)Libraries\include</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -145,12 +145,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Engine\Drawing\drawing.cpp" />
+    <ClCompile Include="Engine\Engine.cpp" />
+    <ClCompile Include="Engine\Types\Vector.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="Libraries\lib\glfw3.lib" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Engine\Drawing\drawing.h" />
+    <ClInclude Include="Engine\Engine.h" />
+    <ClInclude Include="Engine\Types\Vector.h" />
     <ClInclude Include="Libraries\include\GLFW\glfw3.h" />
     <ClInclude Include="Libraries\include\GLFW\glfw3native.h" />
   </ItemGroup>
